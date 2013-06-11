@@ -1,0 +1,15 @@
+Package: uarray
+Type: Package
+Title: Microarray data classification
+Version: 0.1.0
+Suggests:
+    testthat (>= 0.7.1)
+Imports:
+    limma
+Date: 2013-06-11
+Author: Paolo C. Sberna <reliablebeaver86-cs@yahoo.it>
+Maintainer: Paolo C. Sberna <reliablebeaver86-cs@yahoo.it>
+Description: Microarray data classification
+License: 
+Collate:
+    'uarray.R'
