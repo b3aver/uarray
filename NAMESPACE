@@ -1,1 +1,4 @@
+export(gdiscretize)
+export(gfilter)
+export(read)
 import(limma)
