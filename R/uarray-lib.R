@@ -18,5 +18,5 @@ read <- function(filename) {
     row.names(dataframe) <- new.row.names
     dataframe[1] <- NULL
     ## traspose the dataframe
-    t(dataframe)
+    as.data.frame(t(dataframe))
 }

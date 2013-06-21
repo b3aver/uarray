@@ -18,7 +18,7 @@ test_that("read function works correctly", {
     X5 = c(1.0, 8.71, 1.00)
     test.df <- data.frame(X1 = X1, X2 = X2, X3 = X3, X4 = X4, X5 = X5)
     row.names(test.df) <- c("class", "X85750_at", "U63842_at")
-    test.df <- t(test.df)
+    test.df <- as.data.frame(t(test.df))
 
     ## check that they correspond
     expect_that(read(filename), equals(test.df))
