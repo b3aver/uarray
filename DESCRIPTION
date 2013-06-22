@@ -13,6 +13,7 @@ Description: Microarray data classification
 License: 
 Collate:
     'uarray.R'
+    'uarray-lib.R'
     'filtering.R'
     'discretization.R'
-    'uarray-lib.R'
+    'discretization-id3.R'

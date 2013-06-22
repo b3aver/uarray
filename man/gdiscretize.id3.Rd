@@ -1,19 +1,20 @@
-\name{gdiscretize}
-\alias{gdiscretize}
+\name{gdiscretize.id3}
+\alias{gdiscretize.id3}
 \title{Produce set of intervals.}
 \usage{
-  gdiscretize(dataset, method = "id3")
+  gdiscretize.id3(dataset)
 }
 \arguments{
   \item{dataset}{training set to be discretized}
-
-  \item{method}{character string specifing the method to
-  use.  Choices are "id3".}
 }
 \value{
   discretized dataset
 }
 \description{
   Produce set of intervals.
+}
+\references{
+  J.R. Quinlan. Induction of Decision Trees. Machine
+  Learning 1 (1986) 81-106.
 }
 
