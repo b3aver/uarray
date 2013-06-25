@@ -41,7 +41,7 @@ gdiscretize.id3 <- function(dataset) {
     ## for each gene discretize its expression data
     for(gene in genes){
         attribute <- as.vector(t(dataset[gene]))
-        res <- discretize.attribute(attribute, classes, id3.cut.points)
+        res <- discretize.attribute(id3.cut.points, attribute, classes)
         dataset[gene] <- res$values
         intervals[[gene]] <- res$intervals
     }

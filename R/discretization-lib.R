@@ -1,16 +1,15 @@
 #' Discretize the values of an attribute.
 #'
+#' @param cut.points.fun function that takes \code{values} and \code{...} and
+#'             returns a vector with the cut points for those values.
 #' @param values vector with the continuous values to discretize.
-#' @param classes vector with the classes associated with the values in
-#'                \code{values}.
-#' @param cut.points.fun function that takes \code{values} and \code{classes}
-#'                      and return a vector with the cut points for those values.
+#' @param ... any other argument to be passed to \code{cut.points.fun}
 #' @return A list with the members: vector \code{values} with the given values
 #'         discretized and \code{intervals} that is a list with the intervals
 #'         used for discretize the values.
-discretize.attribute <- function(values, classes, cut.points.fun){
+discretize.attribute <- function(cut.points.fun, values, ...){
     ## retrieve the cut points
-    cp <- cut.points.fun(values, classes)
+    cp <- cut.points.fun(values, ...)
     ## build the intervals
     intervals <- build.intervals(cp)
     ## discretize the values in the given intervals

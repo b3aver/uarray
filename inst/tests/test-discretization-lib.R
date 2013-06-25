@@ -22,6 +22,6 @@ test_that("discretize.attribute works well", {
     expected.intervals <- list(c(-Inf, 2.5), c(2.5, 4), c(4, 7.5), c(7.5, 13),
                                c(13, Inf))
     expected.values.d <- c(2, 3, 4, 1, 4,  4, 3, 2, 5, 3, 4, 1, 4, 4)
-    expect_equal(discretize.attribute(values, classes, cut.points.fun),
+    expect_equal(discretize.attribute(cut.points.fun, values, classes),
                  list(values=expected.values.d, intervals=expected.intervals))
 })
