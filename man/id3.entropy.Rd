@@ -5,7 +5,7 @@
   id3.entropy(classes)
 }
 \arguments{
-  \item{classes}{vector with the attribute classes}
+  \item{classes}{vector with the attribute classes.}
 }
 \value{
   Entropy of the given data.

@@ -6,10 +6,10 @@
 }
 \arguments{
   \item{values}{vector with the continuous values to
-  discretize}
+  discretize.}
 
   \item{classes}{vector with the classes associated with
-  the values in \code{values}}
+  the values in \code{values}.}
 }
 \value{
   Vector with the cut points.

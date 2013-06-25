@@ -5,10 +5,10 @@
   id3.entropy.partition(classes, split.point)
 }
 \arguments{
-  \item{classes}{vector with the attribute classes}
+  \item{classes}{vector with the attribute classes.}
 
   \item{split.point}{index of the element that separates
-  the partitions}
+  the partitions.}
 }
 \value{
   Entropy of the partition.

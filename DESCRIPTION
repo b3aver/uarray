@@ -16,4 +16,5 @@ Collate:
     'uarray-lib.R'
     'filtering.R'
     'discretization.R'
+    'discretization-lib.R'
     'discretization-id3.R'

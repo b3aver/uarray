@@ -1,5 +1,4 @@
 export(gdiscretize)
 export(gfilter)
-export(id3.discretize)
 export(read)
 import(limma)

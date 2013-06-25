@@ -1,25 +1,9 @@
 \encoding{utf8}
 \name{id3}
 \alias{id3}
-\alias{id3.discretize}
 \title{ID3 Discretizer}
-\usage{
-  id3.discretize(values, classes)
-}
-\arguments{
-  \item{values}{vector with the continuous values to
-  discretize}
-
-  \item{classes}{vector with the classes associated with
-  the values in \code{values}}
-}
-\value{
-  Vector with the \code{values} discretized
-}
 \description{
   ID3 Discretizer
-
-  Discretize the values of an attribute.
 }
 \references{
   J.R. Quinlan. Induction of Decision Trees. Machine

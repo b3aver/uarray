@@ -23,17 +23,29 @@
 NULL
 
 
-#' Discretize the values of an attribute.
+#' Produce set of intervals using the ID3 discretization method.
 #'
-#' @export
-#' @rdname id3
-#' @param values vector with the continuous values to discretize
-#' @param classes vector with the classes associated with the values in
-#'                \code{values}
-#' @return Vector with the \code{values} discretized
-id3.discretize <- function(values, classes){
-    ## retrieve the cut points
-    cp <- id3.cut.points(values, classes)
+#' @param dataset training set to be discretized
+#' @return A list with the members: \code{dataset} with the discretized dataset
+#'         and \code{intervals} that is a list with members named with genes
+#'         names and each containing a list with the intervals used for
+#'         discretize that gene.
+gdiscretize.id3 <- function(dataset) {
+    ## class values
+    classes <- as.vector(t(dataset$class))
+    ## genes names
+    cols <- colnames(dataset)
+    genes <- cols[which(cols!="class")]
+    ## intervals list to return
+    intervals <- list()
+    ## for each gene discretize its expression data
+    for(gene in genes){
+        attribute <- as.vector(t(dataset[gene]))
+        res <- discretize.attribute(attribute, classes, id3.cut.points)
+        dataset[gene] <- res$values
+        intervals[[gene]] <- res$intervals
+    }
+    list(dataset = dataset, intervals = intervals)
 }
 
 
@@ -41,9 +53,9 @@ id3.discretize <- function(values, classes){
 #'
 #' Compute the cut points for the given values and classes.
 #'
-#' @param values vector with the continuous values to discretize
+#' @param values vector with the continuous values to discretize.
 #' @param classes vector with the classes associated with the values in
-#'                \code{values}
+#'                \code{values}.
 #' @return Vector with the cut points.
 id3.cut.points <- function(values, classes){
     ## check function's parameters
@@ -96,7 +108,7 @@ id3.cut.points <- function(values, classes){
 
 #' Entropy of the data.
 #'
-#' @param classes vector with the attribute classes
+#' @param classes vector with the attribute classes.
 #' @return Entropy of the given data.
 id3.entropy <- function(classes){
     ## count of elements for each class
@@ -110,8 +122,8 @@ id3.entropy <- function(classes){
 
 #' Entropy of a partition.
 #'
-#' @param classes vector with the attribute classes
-#' @param split.point index of the element that separates the partitions
+#' @param classes vector with the attribute classes.
+#' @param split.point index of the element that separates the partitions.
 #' @return Entropy of the partition.
 id3.entropy.partition <- function(classes, split.point){
     ## split the vector classes
