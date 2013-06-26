@@ -1,16 +1,13 @@
-\name{gdiscretize}
-\alias{gdiscretize}
-\title{Produce set of intervals.}
+\name{gdiscretize.ewib}
+\alias{gdiscretize.ewib}
+\title{Produce set of intervals using the EWIB discretization method.}
 \usage{
-  gdiscretize(dataset, method = "id3", num.bin = 10)
+  gdiscretize.ewib(dataset, num.bin = 10)
 }
 \arguments{
   \item{dataset}{training set to be discretized}
 
-  \item{method}{character string specifing the method to
-  use.  Choices are "id3", "ewib".}
-
-  \item{num.bin}{number of bins for EWIB method}
+  \item{num.bin}{number of bins}
 }
 \value{
   A list with the members: \code{dataset} with the
@@ -19,6 +16,7 @@
   list with the intervals used for discretize that gene.
 }
 \description{
-  Produce set of intervals.
+  Produce set of intervals using the EWIB discretization
+  method.
 }
 

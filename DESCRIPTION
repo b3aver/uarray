@@ -18,3 +18,4 @@ Collate:
     'discretization.R'
     'discretization-lib.R'
     'discretization-id3.R'
+    'discretization-ewib.R'
