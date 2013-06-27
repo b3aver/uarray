@@ -112,7 +112,7 @@ id3.cut.points <- function(values, classes){
 #' @return Entropy of the given data.
 id3.entropy <- function(classes){
     ## count of elements for each class
-    cis <- summary(as.factor(classes))
+    cis <- as.vector(table(classes))
     ## total number of elements
     s <- length(classes)
     ## entropy

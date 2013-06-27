@@ -40,10 +40,15 @@ build.intervals <- function(cut.points){
 #' @return Vector with the given values discretized.
 discretize.values <- function(values, intervals){
     values.d <- vector()
+    sorted <- !is.unsorted(values)
+    start.int <- 1
     for(value in values){
-        for(i in 1:length(intervals)){
-            if(value < intervals[[i]][2]){
-                values.d <- c(values.d, i)
+        for(int in start.int:length(intervals)){
+            if(value < intervals[[int]][2]){
+                values.d <- c(values.d, int)
+                if(sorted){
+                    start.int <- int
+                }
                 break
             }
         }
