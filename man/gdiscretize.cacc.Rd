@@ -1,16 +1,11 @@
-\name{gdiscretize}
-\alias{gdiscretize}
-\title{Produce set of intervals.}
+\name{gdiscretize.cacc}
+\alias{gdiscretize.cacc}
+\title{Produce set of intervals using the CACC discretization method.}
 \usage{
-  gdiscretize(dataset, method = "id3", num.bin = 10)
+  gdiscretize.cacc(dataset)
 }
 \arguments{
   \item{dataset}{training set to be discretized}
-
-  \item{method}{character string specifing the method to
-  use.  Choices are "id3", "ewib", "cacc".}
-
-  \item{num.bin}{number of bins for EWIB method}
 }
 \value{
   A list with the members: \code{dataset} with the
@@ -19,6 +14,7 @@
   list with the intervals used for discretize that gene.
 }
 \description{
-  Produce set of intervals.
+  Produce set of intervals using the CACC discretization
+  method.
 }
 
