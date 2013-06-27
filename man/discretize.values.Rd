@@ -1,6 +1,6 @@
 \name{discretize.values}
 \alias{discretize.values}
-\title{Discretize a series of values using the given intervals}
+\title{Discretize a series of values using the given intervals.}
 \usage{
   discretize.values(values, intervals)
 }
@@ -16,6 +16,6 @@
   Vector with the given values discretized.
 }
 \description{
-  Discretize a series of values using the given intervals
+  The intervals are considered left-closed and right-open.
 }
 

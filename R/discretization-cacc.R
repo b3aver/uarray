@@ -66,6 +66,8 @@ cacc.cut.points <- function(values, classes){
     ord <- order(values)
     values <- values[ord]
     classes <- classes[ord]
+    ## number of classes
+    num.classes <- length(table(classes))
 
     ## Form a set of all distinct values in ascending order
     values.unique <- values[!duplicated(values)]
@@ -75,17 +77,37 @@ cacc.cut.points <- function(values, classes){
     upper <- values.unique[-1]
     cp <- (lower + upper)/2
     selected <- rep(F, length(cp))
-    selected[1] <- T
 
     ## Set the initial discretization scheme as D: {[d0,dn]} and Globalcacc = 0
-    globalcacc <- 0
-    ##   For each  inner boundary which is not already in  scheme D
-    ##   Add it into D;
-    ##   Calculate the corresponding cacc value;
-    ##   see if add the cutpoint with maximum cacc value
-    ##   otherwise, finish the algorithm
-    ##   return the selected cutpoints
+    global.cacc <- 0
+    done <- F
+    while(!done){
+        max.cacc <- -1
+        max.pos <- 0
+        ## For each  inner boundary which is not already in  scheme D
+        for(unselected in which(!selected)){
+            ## Add it into D
+            selected.temp <- selected
+            selected.temp[unselected] <- T
+            ## Calculate the corresponding cacc value
+            cut.points <- cp[selected.temp]
+            cacc <- cacc.value(values, classes, cut.points)
+            if(cacc > max.cacc){
+                max.cacc <- cacc
+                max.pos <- unselected
+            }
+        }
+        ## see if add the cutpoint with maximum cacc value
+        if(max.cacc > global.cacc || length(selected[selected]) < num.classes){
+            selected[max.pos] <- T
+            global.cacc <- max.cacc
+        }else {
+            ## otherwise, finish the algorithm
+            done <- TRUE
+        }
+    }
     ## Output the Discretization scheme with k intervals for continous attribute
+    cut.points <- cp[selected]
 }
 
 

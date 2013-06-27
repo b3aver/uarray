@@ -30,7 +30,9 @@ build.intervals <- function(cut.points){
 }
 
 
-#' Discretize a series of values using the given intervals
+#' Discretize a series of values using the given intervals.
+#'
+#' The intervals are considered left-closed and right-open.
 #'
 #' @param values vector with the continuous values to discretize.
 #' @param intervals list with an entry for each interval. Every interval must be
