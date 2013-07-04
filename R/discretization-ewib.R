@@ -6,8 +6,8 @@ NULL
 
 #' Produce set of intervals using the EWIB discretization method.
 #'
-#' @param dataset training set to be discretized
-#' @param num.bin number of bins
+#' @param dataset training set to be discretized.
+#' @param num.bin number of bins.
 #' @return A list with the members: \code{dataset} with the discretized dataset
 #'         and \code{intervals} that is a list with members named with genes
 #'         names and each containing a list with the intervals used for
@@ -34,7 +34,7 @@ gdiscretize.ewib <- function(dataset, num.bin = 10) {
 #' Compute the cut points for the given values.
 #'
 #' @param values vector with the continuous values to discretize.
-#' @param num.bin number of bins
+#' @param num.bin number of bins.
 #' @return Vector with the cut points.
 ewib.cut.points <- function(values, num.bin = 10){
     delta <- (max(values) - min(values)) / num.bin

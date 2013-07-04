@@ -5,12 +5,12 @@
   gdiscretize(dataset, method = "id3", num.bin = 10)
 }
 \arguments{
-  \item{dataset}{training set to be discretized}
+  \item{dataset}{training set to be discretized.}
 
   \item{method}{character string specifing the method to
   use.  Choices are "id3", "ewib", "cacc".}
 
-  \item{num.bin}{number of bins for EWIB method}
+  \item{num.bin}{number of bins for EWIB method.}
 }
 \value{
   A list with the members: \code{dataset} with the

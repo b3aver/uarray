@@ -18,11 +18,11 @@ trainingsetFN <- "data/trainingset.csv"
 trainingset <- read(trainingsetFN)
 filteredTS <- gfilter(trainingset)
 discretizedTS <- gdiscretize(filteredTS)
-classificationModel <- train(discretizedTS)
+classificationModel <- train(discretizedTS$dataset, discretizedTS$intervals)
 
-testdataFN <- "data/testdata.tsv"
-testdata <- read(testdataFN)
-classify(classificationModel, testdata)
+newsampleFN <- "data/newsample.csv"
+newsample <- read(newsampleFN)
+classify(newsample, classificationModel)
 }
 }
 \author{

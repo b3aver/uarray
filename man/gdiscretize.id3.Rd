@@ -5,7 +5,7 @@
   gdiscretize.id3(dataset)
 }
 \arguments{
-  \item{dataset}{training set to be discretized}
+  \item{dataset}{training set to be discretized.}
 }
 \value{
   A list with the members: \code{dataset} with the

@@ -2,8 +2,8 @@
 \alias{gfilter}
 \title{Select discriminant gene expression values.}
 \usage{
-  gfilter(dataset, method = "limma", number = NULL,
-    p.value = NULL)
+  gfilter(dataset, method = "limma", number = 10,
+    p.value = 1)
 }
 \arguments{
   \item{dataset}{training set to be filtered}

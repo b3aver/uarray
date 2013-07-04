@@ -25,7 +25,7 @@ NULL
 
 #' Produce set of intervals using the ID3 discretization method.
 #'
-#' @param dataset training set to be discretized
+#' @param dataset training set to be discretized.
 #' @return A list with the members: \code{dataset} with the discretized dataset
 #'         and \code{intervals} that is a list with members named with genes
 #'         names and each containing a list with the intervals used for

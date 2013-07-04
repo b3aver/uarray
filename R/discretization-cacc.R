@@ -25,7 +25,7 @@ NULL
 
 #' Produce set of intervals using the CACC discretization method.
 #'
-#' @param dataset training set to be discretized
+#' @param dataset training set to be discretized.
 #' @return A list with the members: \code{dataset} with the discretized dataset
 #'         and \code{intervals} that is a list with members named with genes
 #'         names and each containing a list with the intervals used for
@@ -114,11 +114,11 @@ cacc.cut.points <- function(values, classes){
 #' Compute the cacc value
 #'
 #' @param values vector with the continuous values to discretize in ascending
-#'               order
+#'               order.
 #' @param classes vector with the classes associated with the values in
 #'                \code{values}.
 #' @param cut.points vector with the cut points.
-#' @return CACC value for the given discretization scheme
+#' @return CACC value for the given discretization scheme.
 cacc.value <- function(values, classes, cut.points){
     ## discretize the values w.r.t. cut.points
     intervals <- build.intervals(cut.points)

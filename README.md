@@ -13,6 +13,6 @@
     classificationModel <- train(discretizedTS$dataset, discretizedTS$intervals)
     
 ### Classification
-    testdataFN <- "data/testdata.csv"
-    testdata <- read(testdataFN)
-    classify(testdata, classificationModel)
+    newsampleFN <- "data/newsample.csv"
+    newsample <- read(newsampleFN)
+    classify(newsample, classificationModel)

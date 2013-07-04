@@ -9,7 +9,7 @@
 #' @param number maximum number of genes to list
 #' @param p.value cutoff value for adjusted p-values. Only genes with lower p-values are listed.
 #' @return filtered dataset
-gfilter <- function(dataset, method = "limma", number = NULL, p.value = NULL){
+gfilter <- function(dataset, method = "limma", number = 10, p.value = 1){
     switch(method,
            limma = gfilter.limma(dataset, number, p.value),
            stop("unsupported method"))

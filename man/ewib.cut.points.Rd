@@ -8,7 +8,7 @@
   \item{values}{vector with the continuous values to
   discretize.}
 
-  \item{num.bin}{number of bins}
+  \item{num.bin}{number of bins.}
 }
 \value{
   Vector with the cut points.

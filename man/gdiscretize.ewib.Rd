@@ -5,9 +5,9 @@
   gdiscretize.ewib(dataset, num.bin = 10)
 }
 \arguments{
-  \item{dataset}{training set to be discretized}
+  \item{dataset}{training set to be discretized.}
 
-  \item{num.bin}{number of bins}
+  \item{num.bin}{number of bins.}
 }
 \value{
   A list with the members: \code{dataset} with the
