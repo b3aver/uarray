@@ -1,0 +1,7 @@
+export(classify)
+export(gdiscretize)
+export(gfilter)
+export(read)
+export(train)
+import(arules)
+import(limma)
