@@ -5,12 +5,13 @@ Version: 0.1.0
 Suggests:
     testthat (>= 0.7.1)
 Imports:
-    limma
+    limma,
+    arules
 Date: 2013-06-11
 Author: Paolo C. Sberna <reliablebeaver86-cs@yahoo.it>
 Maintainer: Paolo C. Sberna <reliablebeaver86-cs@yahoo.it>
 Description: Microarray data classification
-License: 
+License: GPL (>=2)
 Collate:
     'uarray.R'
     'uarray-lib.R'
@@ -20,3 +21,6 @@ Collate:
     'discretization-id3.R'
     'discretization-ewib.R'
     'discretization-cacc.R'
+    'classification.R'
+    'classification-lib.R'
+    'classification-arules.R'

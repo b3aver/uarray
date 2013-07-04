@@ -34,7 +34,7 @@
 #' @seealso \code{\link[limma]{limma}}
 #'
 #' @author Paolo C. Sberna <reliablebeaver86-cs@@yahoo.it>
-#' @import limma
+#' @import limma arules
 #' @docType package
 #' @name uarray-package
 NULL
