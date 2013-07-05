@@ -16,3 +16,7 @@
     newsampleFN <- "data/newsample.csv"
     newsample <- read(newsampleFN)
     classify(newsample, classificationModel)
+
+
+### Validation
+    accuracy(validate(trainingset))

@@ -24,3 +24,5 @@ Collate:
     'classification.R'
     'classification-lib.R'
     'classification-arules.R'
+    'validation.R'
+    'validation-loocv.R'

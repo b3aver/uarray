@@ -3,10 +3,10 @@
 #' Apply the T-Test to the gene expression values.
 #'
 #' @export
-#' @param dataset training set to be filtered
+#' @param dataset training set to be filtered.
 #' @param method character string specifing the method to use.
 #'               Choices are "limma".
-#' @param number maximum number of genes to list
+#' @param number maximum number of genes to list.
 #' @param p.value cutoff value for adjusted p-values. Only genes with lower p-values are listed.
 #' @return filtered dataset
 gfilter <- function(dataset, method = "limma", number = 10, p.value = 1){

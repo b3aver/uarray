@@ -23,6 +23,8 @@ classificationModel <- train(discretizedTS$dataset, discretizedTS$intervals)
 newsampleFN <- "data/newsample.csv"
 newsample <- read(newsampleFN)
 classify(newsample, classificationModel)
+
+accuracy(validate(trainingset))
 }
 }
 \author{
