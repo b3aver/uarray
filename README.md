@@ -4,6 +4,7 @@
 ### Installation
     library(devtools)
     install_github("uarray", username="b3aver")
+    library(uarray)
 
 ### Training
     trainingsetFN <- "data/trainingset.csv"
