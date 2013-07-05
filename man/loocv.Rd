@@ -20,7 +20,7 @@
 
   \item{method.mfi}{character string specifing the method
   to use for compute the maximal frequent itemsets.
-  Choices are "arules". #'}
+  Choices are "arules".}
 
   \item{number.filt}{maximum number of genes to list in
   filtering.}

@@ -15,7 +15,7 @@ NULL
 #' @param method.mfi character string specifing the method to use for compute
 #'          the maximal frequent itemsets.
 #'          Choices are "arules".
-#' #' @param number.filt maximum number of genes to list in filtering.
+#' @param number.filt maximum number of genes to list in filtering.
 #' @param p.value cutoff value for adjusted p-values.
 #'          Only genes with lower p-values are listed.
 #' @param num.bin number of bins for EWIB method.
