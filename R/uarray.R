@@ -10,9 +10,29 @@
 #'   \item{classify}{Classify an entry}
 #' }
 #'
+#' Available datasets from \url{http://ferrolab.dmi.unict.it/midclass.html}
+#' \itemize{
+#'   \item Brain_Cancer.csv
+#'   \item BRC_01.csv
+#'   \item BRC_2.csv
+#'   \item Gastric_Cancer.csv
+#'   \item Lung_Cancer_1.csv
+#'   \item Lung_Cancer_2.csv
+#'   \item Lymphoma_Cancer.csv
+#'   \item Melanoma_Cancer.csv
+#'   \item Myeloma_Cancer.csv
+#'   \item Pacreatic_Cancer.csv
+#'   \item Prostate_Cancer.csv
+#' }
+#' the paths to them can be retrieved with
+#' \code{system.file("extdata", "<dataset filename>", package="uarray")}
+#'
 #' @examples
 #' \dontrun{
 #' trainingsetFN <- "data/trainingset.csv"
+#' ## or for a dataset provided with the package
+#' ## trainingsetFN <- system.file("extdata", "Brain_Cancer.csv",
+#' ##                               package="uarray")
 #' trainingset <- read(trainingsetFN)
 #' filteredTS <- gfilter(trainingset)
 #' discretizedTS <- gdiscretize(filteredTS)
@@ -29,6 +49,7 @@
 #' Alfredo Ferro.
 #' MIDClass: Microarray Data Classification by Association Rules and Gene
 #' Expression Intervals
+#' \url{http://ferrolab.dmi.unict.it/midclass.html}
 #'
 #' Smyth, G. K. (2004).
 #' Linear models and empirical Bayes methods for assessing differential
