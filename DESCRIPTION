@@ -1,17 +1,21 @@
 Package: uarray
 Type: Package
 Title: Microarray data classification
+Description: Microarray data classification
 Version: 0.1.0
+Date: 2013-06-11
+Authors@R: c(person("Paolo", "Sberna", , "C.", role = c("aut", "cre"),
+    email = "reliablebeaver86-cs@yahoo.it"),
+    person("Alfredo", "Pulvirenti", role = "ctb",
+    email = "apulvirenti@dmi.unict.it"))
+Author: Paolo C. Sberna <reliablebeaver86-cs@yahoo.it>
+Maintainer: Paolo C. Sberna <reliablebeaver86-cs@yahoo.it>
+License: GPL (>=2)
 Suggests:
     testthat (>= 0.7.1)
 Imports:
     limma,
     arules
-Date: 2013-06-11
-Author: Paolo C. Sberna <reliablebeaver86-cs@yahoo.it>
-Maintainer: Paolo C. Sberna <reliablebeaver86-cs@yahoo.it>
-Description: Microarray data classification
-License: GPL (>=2)
 Collate:
     'uarray.R'
     'uarray-lib.R'

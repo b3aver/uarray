@@ -21,6 +21,9 @@ gfilter <- function(dataset, method = "limma", number = 10, p.value = 1){
 #' @references Smyth, G. K. (2004). Linear models and empirical Bayes methods for assessing differential expression in microarray experiments. Statistical Applications in Genetics and Molecular Biology, Vol. 3, No. 1, Article 3.
 #' http://www.bepress.com/sagmb/vol3/iss1/art3
 #'
+#' @seealso \code{\link[limma]{limma}} \code{\link{lmFit}}
+#'          \code{\link{eBayes}} \code{\link{topTable}}
+#'
 #' @param dataset training set to be filtered
 #' @param number maximum number of genes to list. \code{number=Inf} for list all genes with adjusted p-values below a specified value.
 #' @param p.value cutoff value for adjusted p-values. Only genes with lower p-values are listed.

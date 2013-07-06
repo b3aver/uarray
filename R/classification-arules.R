@@ -6,11 +6,13 @@
 #' Introduction to arules – A computational environment for mining association
 #' rules and frequent item sets
 #'
-#' @name arules
+#' @name classification-arules
 NULL
 
 
 #' Generate the maximal frequent itemsets using the arules package.
+#'
+#' @seealso \code{\link[=apriori]{apriori}}
 #'
 #' @param dataset training set with the values discretized.
 #' @param support a numeric value for the minimal support of an itemset.
