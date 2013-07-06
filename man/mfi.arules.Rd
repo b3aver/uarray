@@ -23,4 +23,7 @@
   Generate the maximal frequent itemsets using the arules
   package.
 }
+\seealso{
+  \code{\link[=apriori]{apriori}}
+}
 
