@@ -47,13 +47,13 @@ classify(newsample, classificationModel)
   Rosalba Giugno, Alfredo Pulvirenti, Luciano Cascione,
   Giuseppe Pigola, Alfredo Ferro. MIDClass: Microarray Data
   Classification by Association Rules and Gene Expression
-  Intervals
+  Intervals.
   \url{http://ferrolab.dmi.unict.it/midclass.html}
 
-  Smyth, G. K. (2004). Linear models and empirical Bayes
-  methods for assessing differential expression in
-  microarray experiments. Statistical Applications in
-  Genetics and Molecular Biology, Vol. 3, No. 1, Article 3.
+  Smyth, G. K. Linear models and empirical Bayes methods
+  for assessing differential expression in microarray
+  experiments. Statistical Applications in Genetics and
+  Molecular Biology, (2004), Vol. 3, No. 1, Article 3.
   \url{http://www.bepress.com/sagmb/vol3/iss1/art3}
 
   J. Alcalá-Fdez, L. Sánchez, S. García, M.J. del Jesus, S.
