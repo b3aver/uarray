@@ -2,6 +2,8 @@
 
 ## Quick start
 ### Installation
+    source("http://bioconductor.org/biocLite.R")
+    biocLite("limma")
     library(devtools)
     install_github("uarray", username="b3aver")
     library(uarray)
@@ -40,7 +42,7 @@ With the package are provided also the following datasets from [MIDClass] []:
 
 the paths to them can be retrieved with
 
-    system.file("extdata", "<dataset filename>", package="uarray")}
+    system.file("extdata", "<dataset filename>", package="uarray")
 
 
 ## References
