@@ -28,4 +28,8 @@
   Genetics and Molecular Biology, Vol. 3, No. 1, Article 3.
   http://www.bepress.com/sagmb/vol3/iss1/art3
 }
+\seealso{
+  \code{\link[limma]{limma}} \code{\link{lmFit}}
+  \code{\link{eBayes}} \code{\link{topTable}}
+}
 

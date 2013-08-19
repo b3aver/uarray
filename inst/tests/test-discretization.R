@@ -5,7 +5,7 @@ test_that("gdiscretize stops passing a wrong method", {
 })
 
 
-test_that("gdiscretize call the id3 method", {
+test_that("gdiscretize calls the id3 method", {
     ## build a dataset for tests
     X1 = c(0.0, 6.57, 4.32)
     X2 = c(1.0, 7.01, 9.70)
