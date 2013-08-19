@@ -21,19 +21,9 @@ test_that("train works well", {
     intervals <- res$intervals
 
     ## test train
-    exp.model <- list("0" = list(
-                          list(list(gene="X85750_at", lower=-Inf, upper=6.79),
-                               list(gene="U63842_at", lower=2.66, upper=7.01)),
-                          list(list(gene="X85750_at", lower=7.635, upper=8.485),
-                               list(gene="U63842_at", lower=10.22, upper=Inf))),
-                      "1" = list(
-                          list(list(gene="X85750_at", lower=6.79, upper=7.635),
-                               list(gene="U63842_at", lower=7.01, upper=10.22)),
-                          list(list(gene="X85750_at", lower=8.485, upper=Inf),
-                               list(gene="U63842_at", lower=-Inf, upper=2.66)),
-                          list(list(gene="X85750_at", lower=8.485, upper=Inf),
-                               list(gene="U63842_at", lower=7.01, upper=10.22)))
-                      )
+    exp.model <- list("1" = list(
+                          list(list(gene="U63842_at", lower=7.01, upper=10.22)),
+                          list(list(gene="X85750_at", lower=8.485, upper=Inf))))
     expect_equal(train(trainingset, intervals, "arules"), exp.model)
 })
 

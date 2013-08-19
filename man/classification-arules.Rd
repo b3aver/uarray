@@ -1,6 +1,6 @@
 \encoding{utf8}
-\name{arules}
-\alias{arules}
+\name{classification-arules}
+\alias{classification-arules}
 \title{Association rules classification using the arules package.}
 \description{
   Association rules classification using the arules

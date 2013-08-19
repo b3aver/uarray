@@ -3,10 +3,10 @@
 #' Apply the T-Test to the gene expression values.
 #'
 #' @export
-#' @param dataset training set to be filtered
+#' @param dataset training set to be filtered.
 #' @param method character string specifing the method to use.
 #'               Choices are "limma".
-#' @param number maximum number of genes to list
+#' @param number maximum number of genes to list.
 #' @param p.value cutoff value for adjusted p-values. Only genes with lower p-values are listed.
 #' @return filtered dataset
 gfilter <- function(dataset, method = "limma", number = 10, p.value = 1){
@@ -20,6 +20,9 @@ gfilter <- function(dataset, method = "limma", number = 10, p.value = 1){
 #'
 #' @references Smyth, G. K. (2004). Linear models and empirical Bayes methods for assessing differential expression in microarray experiments. Statistical Applications in Genetics and Molecular Biology, Vol. 3, No. 1, Article 3.
 #' http://www.bepress.com/sagmb/vol3/iss1/art3
+#'
+#' @seealso \code{\link[limma]{limma}} \code{\link{lmFit}}
+#'          \code{\link{eBayes}} \code{\link{topTable}}
 #'
 #' @param dataset training set to be filtered
 #' @param number maximum number of genes to list. \code{number=Inf} for list all genes with adjusted p-values below a specified value.
