@@ -40,16 +40,25 @@ mfi.arules <- function(dataset, support = 0.1){
         trainingset <- trainingset[-1]
         ## create the transactions
         transactions <- as(trainingset, "transactions")
-        ## execute the apriori algorithm
-        parameters <- list(target="maximally frequent itemsets", maxlen=10,
-                           support=support)
-        control <- list(verbose=F)
-        itemsets <- apriori(transactions, parameter=parameters, control=control)
-        ## extract only the items from the result
-        itemsets <- as(items(itemsets), "list")
-
-        ## attach the itemsets to the model to return
-        mfi[[as.character(cl)]] <- itemsets
+        ## ignore classes with less than 2 transactions
+        if(length(transactions) >= 2){
+            ## check that the absolute support is at least 2
+            min.supp <- support
+            if(as.integer(support*length(transactions)) < 2){
+                min.supp <- 2/length(transactions)
+            }
+            ## execute the apriori algorithm
+            parameters <- list(target="maximally frequent itemsets", maxlen=10,
+                               support=min.supp)
+            control <- list(verbose=F)
+            itemsets <- apriori(transactions, parameter=parameters,
+                                control=control)
+            ## extract only the items from the result
+            itemsets <- as(items(itemsets), "list")
+            
+            ## attach the itemsets to the model to return
+            mfi[[as.character(cl)]] <- itemsets
+        }
     }
 
     apply.on.items(mfi, parse.item)

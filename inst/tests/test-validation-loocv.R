@@ -7,7 +7,7 @@ test_that("loocv works well", {
                           "gene2" = c(2, 3, 1, 4, 1, 4),
                           "gene3" = c(1, 2, 3, 2, 1, 4))
     ## test loocv
-    exp.cm <- matrix(c(2, 2, 2, 0), nrow=2, byrow=T)
+    exp.cm <- matrix(c(4, 0, 2, 0), nrow=2, byrow=T)
     rownames(exp.cm) <- c("0", "1")
     colnames(exp.cm) <- c("0", "1")
     expect_equal(loocv(test.df), exp.cm)
@@ -22,7 +22,7 @@ test_that("loocv works well", {
     row.names(test.df) <- c("class", "X85750_at", "U63842_at")
     test.df <- as.data.frame(t(test.df))
     ## test loocv
-    exp.cm <- matrix(c(0, 2, 2, 1), nrow=2, byrow=T)
+    exp.cm <- matrix(c(0, 2, 1, 1), nrow=2, byrow=T)
     rownames(exp.cm) <- c("0", "1")
     colnames(exp.cm) <- c("0", "1")
     expect_equal(loocv(test.df), exp.cm)
